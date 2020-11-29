@@ -27,6 +27,7 @@ class ProgramController extends AbstractController
      */
     public function show(int $id): Response
     {
+
         return $this->render('program/show.html.twig', [
             'id' => $id,
         ]);
