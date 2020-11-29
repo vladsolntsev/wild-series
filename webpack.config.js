@@ -22,6 +22,8 @@ Encore
         // only copy files matching this pattern
         //pattern: /\.(png|jpg|jpeg)$/
     })
+
+    .autoProvidejQuery()
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
@@ -81,6 +83,6 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/admin.js')
-;
+
 
 module.exports = Encore.getWebpackConfig();
