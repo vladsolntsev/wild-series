@@ -1,5 +1,16 @@
+/* Bootstrap override*/
+
 $theme-colors: (
-        "primary": #1F2041,
-        "secondary": #F0F0F0
+        'primary': #1F2041,
+'primary-lighter': #826AED,
+'secondary-body': #F0F0F0,
+'secondary-text': #5EA0E5,
 );
+
+$primary: #1F2041;
+$primary-lighter: #826AED;
+$secondary-body: #F0F0F0;
+$secondary-text: #5EA0E5;
+
+
 
