@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les épisodes{% endblock %}
+
+{% block body %}
+    <h1>Toutes les épisodes de la Saison {{ season.number }}</h1>
+    {% for episode in episodes %}
+        <div>
+            <h5>{{ episode.number }} - {{ episode.title }}</h5>
+            <p>{{ episode.synopsis }}</p>
+        </div>
+    {% else %}
+        Aucun épisode trouvé.
+    {% endfor %}
+
+    <a href="{{ path('program_index') }}">
+        Retour à la liste des séries
+    </a>
+{% endblock %}
