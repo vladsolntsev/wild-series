@@ -48,7 +48,7 @@ class CategoryController extends AbstractController
             );
         if (!$lastPrograms) {
             throw $this->createNotFoundException(
-                'No category '.$categoryName.' found.'
+                'No category ' . $categoryName . ' found.'
             );
         }
         return $this->render('category/show.html.twig', [
