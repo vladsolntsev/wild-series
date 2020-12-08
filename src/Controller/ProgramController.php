@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Actor;
 use App\Entity\Episode;
 use App\Entity\Program;
 use App\Entity\Season;
@@ -100,9 +101,9 @@ class ProgramController extends AbstractController
     /**
      * @Route("/{programId}/seasons/{seasonId}/episodes/{episodeId}", name="episode_show")
      * @ParamConverter ("program", class="App\Entity\Program", options={"mapping": {"programId": "id"}})
-     * @ParamConverter ("season", class="App\Entity\Season", options={"mapping": {"seasonId": "number"}})
-     * @ParamConverter ("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "number"}})
-     *
+     * @ParamConverter ("season", class="App\Entity\Season", options={"mapping": {"seasonId": "id"}})
+     * @ParamConverter ("episode", class="App\Entity\Episode", options={"mapping": {"episodeId": "id"}})
+     * @return Response
      */
     public function showEpisode(Program $program, Season $season, Episode $episode): Response
     {

@@ -27,7 +27,7 @@ class ActorController extends AbstractController
         ]);
     }
     /**
-     * @Route("/actors/{actorId}", methods={"GET"}, name="show")
+     * @Route("/{actorId}", methods={"GET"}, name="show")
      * @ParamConverter("actor", class="App\Entity\Actor", options={"mapping": {"actorId": "id"}})
      */
     public function show(Actor $actor):Response
