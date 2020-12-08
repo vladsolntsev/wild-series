@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1>Ajouter un programme</h1>
-    {{ form_start }}
+    {{ form_start(form) }}
      {{ form_widget(form) }}
     <input class="btn btn-secondary" type='submit' value='Add program'>
     {{ form_end(form) }}
