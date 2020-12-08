@@ -62,18 +62,18 @@ class ProgramController extends AbstractController
 
 
     /**
-     * @Route("/{id}", methods={"GET"}, name="show")
-     * @param Program $id
+     * @Route("/{programId}", methods={"GET"}, name="show")
+     * @ParamConverter ("program", class="App\Entity\Program", options={"mapping": {"programId": "id"}})
      * @return Response
      */
-    public function show(Program $id): Response
+    public function show(Program $programId): Response
     {
         $seasons = $this->getDoctrine()
             ->getRepository(Season::class)
-            ->findBy(['program' => $id]);
+            ->findBy(['program' => $programId]);
 
         return $this->render('program/show.html.twig', [
-            'program' => $id,
+            'program' => $programId,
             'seasons' => $seasons,
         ]);
     }
