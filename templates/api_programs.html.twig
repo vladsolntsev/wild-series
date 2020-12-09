@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block title %}Wild Series{% endblock %}
+  {% block body %}<h1>Trois films aléatoires d'IMDb</h1>
+
+      <div class="container">
+          <div class="row">
+
+                  {% for k in content %}
+              <div class="col">
+                  <a href="{{ path("api_show", { num: k.imdbID }) }}">
+                      <h3 class="mt-0">{{ k.Title }}</h3>
+                  </a>
+                 Catégorie : {{ k.Genre }}
+              </div>
+                      {% endfor %}
+
+          </div>
+      </div>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <div class="media">
+
+        <img class="align-self-start mr-3" src="{{  content.Poster }}" alt="{{ content.Title }} poster">
+        <div class="media-body">
+            <h1 class="mt-0">{{ content.Title }}</h1>
+            <p>{{ content.Plot }}</p>
+            <p>Catégorie : {{ content.Genre }}</p>
+     <p>Date de réalisation : {{ content.Released }}</p>
+            <strong>Acteurs :</strong>
+          <p>{{ content.Actors }}</p>
+            <p>Ecrit par {{ content.Writer }}</p>
+            <p>Durée : {{ content.Runtime }}</p>
+            <p>{{ content.Plot }}</p>
+
+{{ content.imdbID }}
+        </div>
+    </div>
+
+{% endblock %}
