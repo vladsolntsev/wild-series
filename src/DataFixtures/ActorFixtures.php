@@ -4,6 +4,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Actor;
+use App\Service\Slugify;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -12,7 +13,12 @@ use Faker;
 
 class ActorFixtures extends Fixture implements DependentFixtureInterface
 {
+    private $slugify;
 
+    public function __construct(Slugify $slugify)
+    {
+        $this->slugify = $slugify;
+    }
 
    public function load(ObjectManager $manager)
     {
@@ -22,6 +28,8 @@ class ActorFixtures extends Fixture implements DependentFixtureInterface
         for ($i = 0; $i < 50; $i++){
             $actor = new Actor();
             $actor->setName($faker->name);
+            $slugTitle = $this->slugify->generate($actor->getName());
+            $actor->setSlug($slugTitle);
             $rand2 = rand(1,4);
             for($j = 0; $j < $rand2; $j++){
                 $rand = rand (0, 5);

@@ -10,7 +10,7 @@
             <p>Année de sortie : {{ season.year }}</p>
             <ul>
                 {% for episode in episodes %}
-                    <a href="{{ path('program_episode_show', {programId: program.id, seasonId: season.id, episodeId: episode.id}) }}">Episode {{ episode.number }}
+                    <a href="{{ path('program_episode_show', {'slug': program.slug, 'seasonId': season.id, 'episodeSlug': episode.slug}) }}">Episode {{ episode.number }}
                         : {{ episode.title }}</a>
                     <p>{{ episode.synopsis }}</p>
                 {% else %}
@@ -19,7 +19,7 @@
             </ul>
         </div>
     </div>
-    <a href="{{ path("program_show", { programId: program.id }) }}">
+    <a href="{{ path("program_show", { 'programId': program.id, 'slug': program.slug  }) }}">
         Retour au programme
     </a>
     <a href="{{ path('program_index') }}">

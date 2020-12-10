@@ -11,9 +11,8 @@
             <p>Catégorie : {{ program.category.name }}</p>
             <ul>
                 {% for season in seasons %}
-                    <h5><a href="{{ path("program_season_show", {programId: program.id, seasonId: season.id }) }}">Saison {{ season.number }}
+                    <h5><a href="{{ path("program_season_show", {'slug': program.slug, 'seasonId': season.id }) }}">Saison {{ season.number }}
                             ({{ season.year }})</a></h5>
-
                 {% else %}
                     Aucune saison trouvée.
                 {% endfor %}
@@ -21,18 +20,14 @@
             <strong>Acteurs :</strong>
             <ul>
                 {% for actor in program.actors %}
-                    <li><a href="{{ path("actor_show", {actorId: actor.id }) }}">{{ actor.name }}</a></li>
+                    <li><a href="{{ path("actor_show", {'slug': actor.slug }) }}">{{ actor.name }}</a></li>
                 {% else %}
                     <li>Aucun acteur pour cette série</li>
                 {% endfor %}
             </ul>
-
-
         </div>
     </div>
-
     <a href="{{ path('program_index') }}">
         Retour à la liste des programmes
     </a>
-
 {% endblock %}
