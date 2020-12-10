@@ -2,7 +2,7 @@
 
 
 namespace App\Controller;
-use App\Services\ApiService;
+use App\Service\ApiService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

@@ -5,7 +5,7 @@
 
       {% for program in programs %}
           <div>
-              <h2><a href="{{ path("program_show", { programId: program.id }) }}">{{ program.title }} -
+              <h2><a href="{{ path("program_show", { slug: program.slug }) }}">{{ program.title }} -
                       Catégorie : {{ program.category.name }}</a></h2>
               <p>{{ program.summary }}</p>
 

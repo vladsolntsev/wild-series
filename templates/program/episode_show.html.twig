@@ -8,9 +8,9 @@
     <h3>Synopsis</h3>
     <p>  {{ episode.synopsis }}</p>
 
-    <a href="{{ path("program_season_show", {programId: program.id, seasonId: season.id }) }}">
+    <a href="{{ path("program_season_show", {'slug': program.slug, seasonId: season.id }) }}">
         Retour à la saison</a>
-    <a href="{{ path("program_show", { programId: program.id }) }}">
+    <a href="{{ path("program_show", {'slug': program.slug  }) }}">
         Retour au programme
     </a>
     <a href="{{ path('program_index') }}">
