@@ -19,6 +19,12 @@
                 <th>Slug</th>
                 <td>{{ actor.slug }}</td>
             </tr>
+            <tr>
+                <th>Programs</th>
+                {% for program in actor.programs %}
+                <td>{{ program.title  }}</td>
+                {% endfor %}
+            </tr>
         </tbody>
     </table>
 
