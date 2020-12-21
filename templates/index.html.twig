@@ -1,7 +1,25 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <h1>
-        Bienvenue !!
+        Wild Series
     </h1>
-    <a href="{{ path("api_programs") }}">Tu ne sais pas quel film regarder ce soir? Cliques ici</a>
+    <h3>
+        Ce site sur les séries que tu as cherché si longtemps.
+    </h3>
+    <div>
+        <p>Voici les dernières séries publiées :</p>
+        {% for program in lastPrograms %}
+        <ul>
+            <li>
+                <a href="{{ path("program_show", { slug: program.slug }) }}">{{ program.title }}</a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+
+    <div>
+        <p>Marre des séries, une envie folle de regarder trois films au hasard parmis toute la base IMDB ?
+            <a href="{{ path("api_programs") }}">Cliques ici</a>
+        </p>
+    </div>
 {% endblock %}
