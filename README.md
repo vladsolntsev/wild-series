@@ -10,5 +10,6 @@ Liens des vidéos pour la correction
 [Quête 16](https://www.loom.com/share/9cb1f23ddd6540409a84d2015ecd1551)        
 [Quête 17](https://www.loom.com/share/317eed3471c44e1ea87857dde97242a4)        
 [Quête 18](https://www.loom.com/share/acd2078340304729a1017541da6a21f9)    
-[Quête 19](https://www.loom.com/share/a1021d32b4ed43a8a0ce55d0458f2854)
-[Quête 20](https://www.loom.com/share/60f85d1f8c664d9aa56e362b22480731)
+[Quête 19](https://www.loom.com/share/a1021d32b4ed43a8a0ce55d0458f2854)    
+[Quête 20](https://www.loom.com/share/60f85d1f8c664d9aa56e362b22480731)    
+[Quête 21](https://www.loom.com/share/d5085bda4302460481e854b77caad1a2)
