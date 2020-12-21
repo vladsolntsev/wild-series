@@ -67,6 +67,7 @@ class EpisodeController extends AbstractController
      */
     public function show(Episode $episode): Response
     {
+
         return $this->render('episode/show.html.twig', [
             'episode' => $episode,
         ]);
