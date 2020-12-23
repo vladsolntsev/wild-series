@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+    <div class="basic-center">
+
     <h1>
         Wild Series
     </h1>
@@ -18,8 +20,12 @@
     </div>
 
     <div>
-        <p>Marre des séries, une envie folle de regarder trois films au hasard parmis toute la base IMDB ?
-            <a href="{{ path("api_programs") }}">Cliques ici</a>
-        </p>
+        <p>Marre des séries, une envie folle de regarder trois films au hasard parmis toute la base IMDB ?  </p>
+    </div>
+
+
+       <div>
+           <a href="{{ path("api_programs") }}">Cliques ici</a>
+    </div>
     </div>
 {% endblock %}

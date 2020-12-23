@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav">
+        <ul class="nav navbar-nav navbar-center">
             <li class="nav-item active">
                 <a class="nav-link text-white" href="/">Acceuil <span class="sr-only">(current)</span></a>
             </li>
@@ -18,17 +18,18 @@
             <li class="nav-item ">
                 <a class="nav-link text-white" href={{ path("actor_index") }}>Acteurs</a>
             </li>
-            <li class="nav-item ">
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
                 {% if app.user %}
-                    <a class="nav-link text-white" href="{{ path('my_profile') }}">Mon Compte</a>
+                <a class="nav-link text-white" href="{{ path('my_profile') }}">Mon Compte</a>
                 {% else %}
-                    <a class="nav-link text-white" href="{{ path('app_login') }}"> Se connecter</a>
+                <a class="nav-link text-white" href="{{ path('app_login') }}"> Se connecter</a>
             </li>
-            <li class="nav-item ">
-                    <a class="nav-link text-white" href="{{ path('app_register') }}">Créer un compte</a>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ path('app_register') }}">Créer un compte</a>
             </li>
-                {% endif %}
-
+            {% endif %}
         </ul>
     </div>
 </nav>
