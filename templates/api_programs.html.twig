@@ -3,6 +3,7 @@
   {% block body %}<h1>{{ 'three.random.from.imdb'|trans }}</h1>
 
       <div class="container">
+
           <div class="row">
 
                   {% for k in content %}
@@ -15,6 +16,14 @@
                       {% endfor %}
 
           </div>
+          <div class="row">
+              <div class="col-12  d-flex justify-content-center">
+                  <button class="btn btn-success" onClick="window.location.reload();">And another one</button>
+              </div>
+
+          </div>
+
+
       </div>
       </div>
 
