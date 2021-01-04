@@ -11,12 +11,14 @@ function addToWatchlist(event) {
         .then(res => res.json())
         // Then update the icon
         .then(function(res) {
-            if (res.isInWatchList) {
+            if (res.isInWatchlist) {
                 watchlistIcon.classList.remove('far'); // Remove the .far (empty heart) from classes in <i> element
                 watchlistIcon.classList.add('fas'); // Add the .fas (full heart) from classes in <i> element
+                console.log('yes');
             } else {
                 watchlistIcon.classList.remove('fas'); // Remove the .fas (full heart) from classes in <i> element
                 watchlistIcon.classList.add('far'); // Add the .far (empty heart) from classes in <i> element
+                console.log('no');
             }
         });
 }
