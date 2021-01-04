@@ -15,4 +15,7 @@ Liens des vidéos pour la correction
 [Quête 21](https://www.loom.com/share/d5085bda4302460481e854b77caad1a2)    
 [Quête 22](https://www.loom.com/share/82a193ca904c4f6e8764f53dd1300737)    
 [Quête 23](https://www.loom.com/share/2a37daeac91d467f9fbfa7e7c1b3800e) -> incomplet car trop long à montrer, checker le commit est plus rapide https://github.com/vladsolntsev/wild-series/commit/15141c5dd2eee19e0ff52dbdba1ce1ccb8b4099c    
-
+[Quête 24](https://www.loom.com/share/db9f8b472d80407f8b88b72dae70001d)
+[Quête 25](https://www.loom.com/share/c9fba7eec1bf44b19fb9642c2f939a2b)
+[Quête 26](https://www.loom.com/share/7ae2ac44b9c44f1482bafe2cb2c71d8d)
+[Quête 27](https://www.loom.com/share/f0be0eb6e13c449a8190aa51c8677e64)
