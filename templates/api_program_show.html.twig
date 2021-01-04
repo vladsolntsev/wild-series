@@ -9,12 +9,12 @@
         <div class="media-body">
             <h1 class="mt-0">{{ content.Title }}</h1>
             <p>{{ content.Plot }}</p>
-            <p>Catégorie : {{ content.Genre }}</p>
-     <p>Date de réalisation : {{ content.Released }}</p>
-            <strong>Acteurs :</strong>
+            <p>{{ 'category'|trans }} : {{ content.Genre }}</p>
+     <p>D{{ 'date'|trans }} : {{ content.Released }}</p>
+            <strong>{{ 'actors'|trans }} :</strong>
           <p>{{ content.Actors }}</p>
-            <p>Ecrit par {{ content.Writer }}</p>
-            <p>Durée : {{ content.Runtime }}</p>
+            <p>{{ 'written.by'|trans }} {{ content.Writer }}</p>
+            <p>{{ 'duration'|trans }} {{ content.Runtime }}</p>
             <p>{{ content.Plot }}</p>
 
 {{ content.imdbID }}

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
-{% block title %}Series Categories{% endblock %}
+{% block title %}{{ 'categories'|trans }}{% endblock %}
 
-  {% block body %}<h1>Toutes les catégories :</h1>
+  {% block body %}<h1>{{ 'categories.list'|trans }}</h1>
 
       {% for category in categories %}
           <div>
@@ -10,9 +10,9 @@
 
           </div>
       {% else %}
-          Aucune catégorie trouvée.
+          {{ 'categories.null'|trans }}
       {% endfor %}
 
-      <a href="{{ path('category_new') }}"> Ajouter une catégorie</a>
-      <a href="{{ path('app_index') }}"> Retour à l'accueil</a>
+      <a href="{{ path('category_new') }}">{{ 'categories.add'|trans }}</a>
+      <a href="{{ path('app_index') }}">{{ 'home'|trans }}</a>
   {% endblock %}

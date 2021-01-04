@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
-{% block title %}Catégorie : {{ category }}{% endblock %}
+{% block title %}{{ 'category'|trans }} : {{ category }}{% endblock %}
 
 {% block body %}
-    <h1>Les 3 dernières séries de la catégorie {{ category }} : </h1>
+    <h1>{{ 'category.last.three'|trans }} {{ category }} : </h1>
     {% for program in programs %}
         <div>
             <h2><a href="{{ path("program_show", { slug: program.slug }) }}">{{ program.title }}</a></h2>
             <p>{{ program.summary }}</p>
         </div>
     {% else %}
-        Aucune série trouvée.
+        {{ 'category.null'|trans }}
     {% endfor %}
     <a href="{{ path('category_index') }}">
-        Retour à la liste des catégories
+        {{ 'category.list'|trans }}
     </a>
 
 {% endblock %}

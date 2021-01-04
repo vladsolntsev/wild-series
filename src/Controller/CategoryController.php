@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\Program;
 use App\Form\CategoryType;
+use App\Repository\CategoryRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -86,6 +87,13 @@ class CategoryController extends AbstractController
         return $this->render('category/show.html.twig', [
             'programs' => $lastPrograms,
             'category' => $categoryName
+        ]);
+    }
+
+    public function navbarTop(CategoryRepository $categoryRepository): Response
+    {
+        return $this->render('/navbartop.html.twig', [
+            'categories' => $categoryRepository->findBy([], ['id' => 'DESC'])
         ]);
     }
 

@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block title %}Wild Series{% endblock %}
 
-  {% block body %}<h1>Toutes les séries :</h1>
+  {% block body %}<h1>{{ 'every.program'|trans }}</h1>
 
       {{ form_start(form) }}
 
     {{ form_widget(form) }}
-    <button class="btn btn-dark">Rechercher</button>
+    <button class="btn btn-dark">{{ 'search'|trans }}</button>
 
 
 
@@ -15,15 +15,15 @@
       {% for program in programs %}
           <div>
               <h2><a href="{{ path("program_show", { slug: program.slug }) }}">{{ program.title }} -
-                      Catégorie : {{ program.category.name }}</a></h2>
+                      {{ 'category'|trans }} : {{ program.category.name }}</a></h2>
               <p>{{ program.summary }}</p>
 
           </div>
       {% else %}
-          Aucune série trouvée.
+          {{ 'program.none'|trans }}
       {% endfor %}
-      <a href="{{ path('program_new') }}">Ajouter un programme</a>
-      <a href="{{ path('app_index') }}">Retour à l'accueil</a>
+      <a href="{{ path('program_new') }}">{{ 'program.add'|trans }}</a>
+      <a href="{{ path('app_index') }}">{{ 'program.list'|trans }}</a>
   {% endblock %}
 
 

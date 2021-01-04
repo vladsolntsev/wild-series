@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block title %}Wild Series{% endblock %}
-  {% block body %}<h1>Trois films aléatoires d'IMDb</h1>
+  {% block body %}<h1>{{ 'three.random.from.imdb'|trans }}</h1>
 
       <div class="container">
           <div class="row">
@@ -10,7 +10,7 @@
                   <a href="{{ path("api_show", { num: k.imdbID }) }}">
                       <h3 class="mt-0">{{ k.Title }}</h3>
                   </a>
-                 Catégorie : {{ k.Genre }}
+                  {{ 'category'|trans }} : {{ k.Genre }}
               </div>
                       {% endfor %}
 

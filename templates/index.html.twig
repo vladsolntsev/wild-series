@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <div class="basic-center">
-
     <h1>
         Wild Series
     </h1>
     <h3>
-        Ce site sur les séries que tu as cherché si longtemps.
+        {{ 'welcome.message.h3'|trans }}
     </h3>
+        <p>{{ 'series.last'|trans }} :</p>
     <div>
-        <p>Voici les dernières séries publiées :</p>
+
         {% for program in lastPrograms %}
         <ul>
             <li>
@@ -20,12 +20,12 @@
     </div>
 
     <div>
-        <p>Marre des séries, une envie folle de regarder trois films au hasard parmis toute la base IMDB ?  </p>
+        <p>{{ 'api.funny.message'|trans }}  </p>
     </div>
 
 
        <div>
-           <a href="{{ path("api_programs") }}">Cliques ici</a>
+           <a href="{{ path("api_programs") }}">{{ 'clic.here'|trans }}</a>
     </div>
     </div>
 {% endblock %}

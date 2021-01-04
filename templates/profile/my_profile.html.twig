@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block title %}Mon profil{% endblock %}
-  {% block body %}<h1>Bienvenue sur ta page, {{ app.user.email }}</h1>
-      <a class="" href="{{ path('app_logout') }}"> Se déconnecter</a>
+  {% block body %}<h1>{{ 'welcome.my.page'|trans }} {{ app.user.email }}</h1>
+      <a class="" href="{{ path('app_logout') }}"> {{ 'account.logout'|trans }}</a>
       {% if userPrograms is empty %}
-          <p>Tu n'as aucune série ajoutée pour le moment. </p>
+          <p>{{ 'series.null.my.page'|trans }} </p>
       {% else %}
-          <p>Voici les séries que tu as ajouté :</p>
+          <p>{{ 'series.my.page'|trans }} :</p>
           {% for program in userPrograms %}
               <ul>
                   <li>

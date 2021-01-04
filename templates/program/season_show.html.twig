@@ -1,30 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Saison numéro {{ season.id }}{% endblock %}
+{% block title %}{{ 'season.number'|trans }}{{ season.id }}{% endblock %}
 {% block body %}
     <div class="media">
         <img class="align-self-start mr-3 poster img-fluid" src="{{ program.poster }}" alt="{{ program.title }} poster">
         <div class="media-body">
-            <h1 class="mt-0">Saison {{ season.number }} de {{ program.title }}</h1>
+            <h1 class="mt-0">{{ 'season'|trans }} {{ season.number }} de {{ program.title }}</h1>
             <p>{{ season.description }}</p>
-            <p>Année de sortie : {{ season.year }}</p>
+            <p>{{ 'season.year'|trans }} {{ season.year }}</p>
             <ul>
                 {% for episode in episodes %}
-                    <a href="{{ path('program_episode_show', {'slug': program.slug, 'seasonId': season.id, 'episodeSlug': episode.slug}) }}">Episode {{ episode.number }}
+                    <a href="{{ path('program_episode_show', {'slug': program.slug, 'seasonId': season.id, 'episodeSlug': episode.slug}) }}">{{ 'episode'|trans }} {{ episode.number }}
                         : {{ episode.title }}</a>
                     <p>{{ episode.synopsis }}</p>
                 {% else %}
-                    Aucun épisode trouvé
+                    {{ 'episode.none'|trans }}
                 {% endfor %}
             </ul>
         </div>
     </div>
 
     <a href="{{ path("program_show", { 'programId': program.id, 'slug': program.slug  }) }}">
-        Retour au programme
+        {{ 'program.show'|trans }}
     </a>
     <a href="{{ path('program_index') }}">
-        Retour à la liste des programmes
+        {{ 'program.list'|trans }}
     </a>
 
 {% endblock %}
